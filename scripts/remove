@@ -70,10 +70,7 @@ ynh_remove_nginx_config
 #=================================================
 ynh_script_progression --message="Removing dependencies..." --time --weight=1
 
-ynh_exec_warn_less apt remove packages-microsoft-prod -y
-
-# Remove metapackage and its dependencies
-ynh_remove_app_dependencies
+rm -r /opt/dotnet
 
 #=================================================
 # CLOSE A PORT

@@ -4,9 +4,6 @@
 # COMMON VARIABLES
 #=================================================
 
-# dependencies used by the app
-pkg_dependencies="aspnetcore-runtime-6.0"
-
 #=================================================
 # PERSONAL HELPERS
 #=================================================

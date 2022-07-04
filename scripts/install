@@ -66,30 +66,14 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 ynh_script_progression --message="Installing dependencies..." --time --weight=1
 
-DEB_VERSION=$(sed 's/\..*//' /etc/debian_version)
+mkdir -p /opt/dotnet
+chmod 750 "/opt/dotnet"
+chmod -R o-rwx "/opt/dotnet"
+chown -R $app:www-data "/opt/dotnet"
 
-case $DEB_VERSION in
+ynh_setup_source --dest_dir="/opt/dotnet" --source_id=$YNH_ARCH
 
-  10)
-    ynh_exec_warn_less wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    ynh_exec_warn_less dpkg -i packages-microsoft-prod.deb
-	rm packages-microsoft-prod.deb
-	
-    ;;
-
-  11)
-	ynh_exec_warn_less wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-    ynh_exec_warn_less dpkg -i packages-microsoft-prod.deb
-	rm packages-microsoft-prod.deb
-    ;;
-
-  *)
-	echo "NOT SUPPORTED!!!"
-    ;;
-esac
-
-ynh_exec_warn_less apt update
-ynh_install_app_dependencies $pkg_dependencies
+ln -s /opt/dotnet/dotnet /usr/bin
 
 #=================================================
 # CREATE DEDICATED USER
