@@ -71,19 +71,20 @@ DEB_VERSION=$(sed 's/\..*//' /etc/debian_version)
 case DEB_VERSION in
 
   10)
-    repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/10/prod buster main"
+	ynh_install_extra_app_dependencies --repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/10/prod buster main" --package="aspnetcore-runtime-6.0"
     ;;
 
   11)
-    repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/11/prod bullseye main"
+	ynh_install_extra_app_dependencies --repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/11/prod bullseye main" --package="aspnetcore-runtime-6.0"
     ;;
 
   *)
     repo=""
+    echo -n "ummmmmm"
+    ynh_install_extra_app_dependencies --repo=$repo --package="aspnetcore-runtime-6.0" 
     ;;
 esac
 
-ynh_install_extra_app_dependencies --repo=$repo --package="aspnetcore-runtime-6.0" 
 
 #=================================================
 # CREATE DEDICATED USER
