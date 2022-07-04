@@ -5,7 +5,7 @@
 #=================================================
 
 # dependencies used by the app
-pkg_dependencies="dotnet-sdk-6.0"
+pkg_dependencies="aspnetcore-runtime-6.0"
 
 #=================================================
 # PERSONAL HELPERS
