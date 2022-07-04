@@ -57,10 +57,6 @@ ynh_script_progression --message="Finding an available port..." --time --weight=
 port=$(ynh_find_port --port=5380)
 ynh_app_setting_set --app=$app --key=port --value=$port
 
-# Open the port
-# ynh_script_progression --message="Configuring firewall..." --time --weight=1
-# ynh_exec_warn_less yunohost firewall allow --no-upnp TCP $port
-
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
@@ -138,7 +134,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --time --weight=1
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports="53"
 
 ### Additional options starting with 3.8:
 ###
