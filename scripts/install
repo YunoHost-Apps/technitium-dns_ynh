@@ -68,7 +68,7 @@ ynh_script_progression --message="Installing dependencies..." --time --weight=1
 
 DEB_VERSION=$(sed 's/\..*//' /etc/debian_version)
 
-case DEB_VERSION in
+case $DEB_VERSION in
 
   10)
 	ynh_install_extra_app_dependencies --repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/10/prod buster main" --package="aspnetcore-runtime-6.0"
