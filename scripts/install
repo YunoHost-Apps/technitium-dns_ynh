@@ -71,11 +71,11 @@ DEB_VERSION=$(sed 's/\..*//' /etc/debian_version)
 case DEB_VERSION in
 
   10)
-    repo="https://packages.microsoft.com/debian/10/prod buster main"
+    repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/10/prod buster main"
     ;;
 
   11)
-    repo="https://packages.microsoft.com/debian/11/prod bullseye main"
+    repo="deb [arch=amd64,arm64,armhf] https://packages.microsoft.com/debian/11/prod bullseye main"
     ;;
 
   *)
