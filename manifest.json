@@ -12,11 +12,11 @@
         "license": "free",
         "website": "https://technitium.com/dns/",
         "demo": "https://demo.example.com",
-        "admindoc": "https://yunohost.org/packaging_apps",
-        "userdoc": "https://yunohost.org/apps",
-        "code": "https://some.forge.com/example/example"
+        "admindoc": "https://technitium.com/dns/help.html",
+        "userdoc": "https://technitium.com/dns/help.html",
+        "code": "https://github.com/TechnitiumSoftware/DnsServer"
     },
-    "license": "free",
+    "license": "GPL-3.0-only",
     "maintainer": {
         "name": "Navan Chauhan",
         "email": "technitiumdns@navan.email"
