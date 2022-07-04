@@ -1,7 +1,7 @@
-SOURCE_URL=url of app's source
-SOURCE_SUM=sha256 checksum
+SOURCE_URL=https://download.technitium.com/dns/archive/8.1.4/DnsServerPortable.tar.gz
+SOURCE_SUM=f244e358a8f7ae5891e3b6a86ac8445a3ea515b9f62d7e14225f1ca24f5c50ac
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
-SOURCE_FILENAME=
+#SOURCE_FILENAME=
 SOURCE_EXTRACT=true

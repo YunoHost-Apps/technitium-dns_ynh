@@ -1,5 +1,5 @@
 [Unit]
-Description=Small description of the service
+Description=Technitium DNS Server
 After=network.target
 
 [Service]
@@ -7,14 +7,15 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/script
+ExecStart=/usr/bin/dotnet __FINALPATH__/DnsServerApp.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dns-server
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
-# Sandboxing options to harden security
-# Depending on specificities of your service/app, you may need to tweak these
-# .. but this should be a good baseline
-# Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes
 PrivateTmp=yes
 PrivateDevices=yes
@@ -38,8 +39,6 @@ CapabilityBoundingSet=~CAP_LEASE CAP_LINUX_IMMUTABLE CAP_IPC_LOCK
 CapabilityBoundingSet=~CAP_BLOCK_SUSPEND CAP_WAKE_ALARM
 CapabilityBoundingSet=~CAP_SYS_TTY_CONFIG
 CapabilityBoundingSet=~CAP_MAC_ADMIN CAP_MAC_OVERRIDE
-CapabilityBoundingSet=~CAP_NET_ADMIN CAP_NET_BROADCAST CAP_NET_RAW
-CapabilityBoundingSet=~CAP_SYS_ADMIN CAP_SYS_PTRACE CAP_SYSLOG
 
 [Install]
 WantedBy=multi-user.target
