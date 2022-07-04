@@ -70,7 +70,8 @@ ynh_remove_nginx_config
 #=================================================
 ynh_script_progression --message="Removing dependencies..." --time --weight=1
 
-rm -r /opt/dotnet
+ynh_secure_remove --file="/usr/bin/dotnet"
+ynh_secure_remove --file="/opt/dotnet"
 
 #=================================================
 # CLOSE A PORT
