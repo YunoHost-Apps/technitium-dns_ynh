@@ -1,0 +1,7 @@
+SOURCE_URL=https://download.visualstudio.microsoft.com/download/pr/084bfc2b-f28d-4995-87f0-d82519245825/7f5398fc2caf95355b154856868ef560/aspnetcore-runtime-6.0.6-linux-arm.tar.gz
+SOURCE_SUM=037a8add2f4c03bb23842097c5aa25fe52b87f6cd5d977237a6e579b6919f73b
+SOURCE_SUM_PRG=sha256sum
+SOURCE_FORMAT=tar.gz
+SOURCE_IN_SUBDIR=false
+SOURCE_FILENAME=
+SOURCE_EXTRACT=true
