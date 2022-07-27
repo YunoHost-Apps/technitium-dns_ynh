@@ -3,15 +3,13 @@
     "id": "technitium-dns",
     "packaging_format": 1,
     "description": {
-        "en": "Block ads & malware at DNS level for your entire network! Self host a DNS server for privacy & security",
-        "fr": "Expliquez en *quelques* (10~15) mots l'utilité de l'app ou ce qu'elle fait (l'objectif est de donner une idée grossière pour des utilisateurs qui naviguent dans un catalogue de 100+ apps)"
+        "en": "Block ads & malware at DNS level for your entire network! Self host a DNS server for privacy & security"
     },
-    "version": "8.1.4~ynh1",
+    "version": "8.1.4~ynh2",
     "url": "https://technitium.com/dns/",
     "upstream": {
-        "license": "free",
+        "license": "GPL-3.0-only",
         "website": "https://technitium.com/dns/",
-        "demo": "https://demo.example.com",
         "admindoc": "https://technitium.com/dns/help.html",
         "userdoc": "https://technitium.com/dns/help.html",
         "code": "https://github.com/TechnitiumSoftware/DnsServer"
