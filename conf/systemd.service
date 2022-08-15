@@ -1,7 +1,11 @@
 [Unit]
 Description=Technitium DNS Server
+After=network.target
 
 [Service]
+Type=simple
+User=__APP__
+Group=__APP__
 WorkingDirectory=__FINALPATH__/
 ExecStart=/usr/bin/dotnet __FINALPATH__/DnsServerApp.dll __DATADIR__
 Restart=always
