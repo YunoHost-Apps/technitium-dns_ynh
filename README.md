@@ -5,7 +5,8 @@ It shall NOT be edited by hand.
 
 # Technitium DNS for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Working status](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)  
+[![Integration level](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Working status](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
+
 [![Install Technitium DNS with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
 *[Lire ce readme en français.](./README_fr.md)*
@@ -33,7 +34,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ... and much more!
 
-**Shipped version:** 8.1.4~ynh2
+**Shipped version:** 11.3.0~ynh1
 
 ## Screenshots
 

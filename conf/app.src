@@ -1,5 +1,5 @@
-SOURCE_URL=https://download.technitium.com/dns/archive/8.1.4/DnsServerPortable.tar.gz
-SOURCE_SUM=f244e358a8f7ae5891e3b6a86ac8445a3ea515b9f62d7e14225f1ca24f5c50ac
+SOURCE_URL=https://download.technitium.com/dns/archive/11.3/DnsServerPortable.tar.gz
+SOURCE_SUM=316290e7ea1c79a856498e7c780ad83a5cc63603f9fb5dee5a22fda42c1689af
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=false
