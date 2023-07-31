@@ -1,5 +1,5 @@
-SOURCE_URL=https://download.visualstudio.microsoft.com/download/pr/94553ccb-ce1a-401c-8840-bdffb4e9d0cb/ab8a0024df90506d953904ac38b5a978/aspnetcore-runtime-6.0.6-linux-arm64.tar.gz
-SOURCE_SUM=e80fbf9feed47e2214c848ac66bdf10ce19ddcd5a06a05ec9b255a7915bd43fd
+SOURCE_URL=https://download.visualstudio.microsoft.com/download/pr/9aca092c-f9c0-48d7-a01f-3c1c2eaac903/01b345ddecc7a90d5c99d016fa5180a6/aspnetcore-runtime-7.0.9-linux-arm64.tar.gz
+SOURCE_SUM=8dc8e5d1373189547aa716c578f9b29afcd7d8d94fd1208650d0809b3af9388b
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=false
