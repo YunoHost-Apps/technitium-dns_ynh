@@ -5,15 +5,16 @@ It shall NOT be edited by hand.
 
 # Technitium DNS pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
+
 [![Installer Technitium DNS avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer Technitium DNS rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer Technitium DNS rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Technitium DNS Server is an open source tool that can be used for blocking Internet Ads using DNS Sinkhole, self hosting a local DNS server for privacy & security or, used for experimentation/testing by software developers on their computer.
 
@@ -33,12 +34,11 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ... and much more!
 
-**Version incluse :** 8.1.4~ynh2
+**Version incluse :** 11.3.0~ynh1
 
+## Captures d’écran
 
-## Captures d'écran
-
-![Capture d'écran de Technitium DNS](./doc/screenshots/example.jpg)
+![Capture d’écran de Technitium DNS](./doc/screenshots/example.jpg)
 
 ## Avertissements / informations importantes
 
@@ -49,10 +49,10 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://technitium.com/dns/>
+* Site officiel de l’app : <https://technitium.com/dns/>
 * Documentation officielle utilisateur : <https://technitium.com/dns/help.html>
-* Documentation officielle de l'admin : <https://technitium.com/dns/help.html>
-* Dépôt de code officiel de l'app : <https://github.com/TechnitiumSoftware/DnsServer>
+* Documentation officielle de l’admin : <https://technitium.com/dns/help.html>
+* Dépôt de code officiel de l’app : <https://github.com/TechnitiumSoftware/DnsServer>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_technitium-dns>
 * Signaler un bug : <https://github.com/YunoHost-Apps/technitium-dns_ynh/issues>
 
@@ -68,4 +68,4 @@ ou
 sudo yunohost app upgrade technitium-dns -u https://github.com/YunoHost-Apps/technitium-dns_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
