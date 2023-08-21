@@ -5,7 +5,7 @@
     "description": {
         "en": "Block ads & malware at DNS level for your entire network! Self host a DNS server for privacy & security"
     },
-    "version": "8.1.4~ynh2",
+    "version": "11.3.0~ynh1",
     "url": "https://technitium.com/dns/",
     "upstream": {
         "license": "GPL-3.0-only",
