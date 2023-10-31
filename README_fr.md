@@ -53,7 +53,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 * Documentation officielle utilisateur : <https://technitium.com/dns/help.html>
 * Documentation officielle de l’admin : <https://technitium.com/dns/help.html>
 * Dépôt de code officiel de l’app : <https://github.com/TechnitiumSoftware/DnsServer>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_technitium-dns>
+* YunoHost Store: <https://apps.yunohost.org/app/technitium-dns>
 * Signaler un bug : <https://github.com/YunoHost-Apps/technitium-dns_ynh/issues>
 
 ## Informations pour les développeurs
