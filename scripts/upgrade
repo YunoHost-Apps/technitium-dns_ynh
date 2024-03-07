@@ -31,7 +31,7 @@ fi
 ynh_script_progression --message="Upgrading source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir/source" --full_replace=1
+ynh_setup_source --dest_dir="$install_dir/sources" --full_replace=1
 ynh_setup_source --source_id="dotnet" --dest_dir="$install_dir/dotnet" --full_replace=1
 
 chmod -R o-rwx "$install_dir"
