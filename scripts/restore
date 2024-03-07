@@ -9,14 +9,6 @@ source ../settings/scripts/_common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# RESTORE DOTNET
-#=================================================
-ynh_script_progression --message="Restoring dotnet..."
-
-ynh_restore_file --origin_path="/opt/dotnet"
-ln -sf /opt/dotnet/dotnet /usr/bin
-
-#=================================================
 # RESTORE THE APP MAIN DIR
 #=================================================
 ynh_script_progression --message="Restoring the app main directory..." --weight=1

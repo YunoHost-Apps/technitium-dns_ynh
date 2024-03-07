@@ -8,24 +8,13 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# INSTALL DOTNET
-#=================================================
-ynh_script_progression --message="Installing dotnet..." --weight=1
-
-ynh_setup_source --source_id=dotnet --dest_dir="/opt/dotnet"
-
-chmod -R o-rwx "/opt/dotnet"
-chown -R "$app:www-data" "/opt/dotnet"
-
-ln -sf /opt/dotnet/dotnet /usr/bin
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression --message="Setting up source files..." --weight=1
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/sources"
+ynh_setup_source --source_id="dotnet" --dest_dir="$install_dir/dotnet"
 
 chmod -R o-rwx "$install_dir"
 chown -R "$app:www-data" "$install_dir"

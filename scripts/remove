@@ -30,14 +30,6 @@ ynh_remove_nginx_config
 ynh_secure_remove --file="/var/log/$app"
 
 #=================================================
-# REMOVE VARIOUS FILES
-#=================================================
-ynh_script_progression --message="Removing Dotnet..." --weight=1
-
-ynh_secure_remove --file="/usr/bin/dotnet"
-ynh_secure_remove --file="/opt/dotnet"
-
-#=================================================
 # END OF SCRIPT
 #=================================================
 

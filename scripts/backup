@@ -14,12 +14,6 @@ source /usr/share/yunohost/helpers
 ynh_print_info --message="Declaring files to be backed up..."
 
 #=================================================
-# BACKUP DOTNET
-#=================================================
-
-ynh_backup --src_path="/opt/dotnet"
-
-#=================================================
 # BACKUP THE APP MAIN DIR
 #=================================================
 
