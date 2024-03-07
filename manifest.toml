@@ -21,7 +21,7 @@ fund = "https://patreon.com/technitium"
 
 [integration]
 yunohost = ">= 4.3.0"
-architectures = ["arm64", "armhf"]
+architectures = ["amd64", "arm64", "armhf"]
 multi_instance = false
 ldap = false
 sso = false
@@ -42,8 +42,13 @@ ram.runtime = "50M" # FIXME: replace with an **estimate** minimum ram requiremen
     url = "https://download.technitium.com/dns/archive/11.3/DnsServerPortable.tar.gz"
     sha256 = "316290e7ea1c79a856498e7c780ad83a5cc63603f9fb5dee5a22fda42c1689af"
     in_subdir = false
+    # Careful, this autoupdate does not put the right asset, it only serves as a notification!
+    autoupdate.strategy = "latest_github_tag"
+    autoupdate.asset = "tarball"
 
     [resources.sources.dotnet]
+    amd64.url = "https://download.visualstudio.microsoft.com/download/pr/cd076f88-c72a-411d-8d7c-a5ed352dce9c/fd020c0de8e056bb5c4a7ef6d1d983d4/aspnetcore-runtime-7.0.16-linux-x64.tar.gz"
+    amd64.sha256 = "7ceb03d3b508e68cbe38618037266a37ea7aa4373c1d07991d9499aba16d6dad"
     arm64.url = "https://download.visualstudio.microsoft.com/download/pr/9aca092c-f9c0-48d7-a01f-3c1c2eaac903/01b345ddecc7a90d5c99d016fa5180a6/aspnetcore-runtime-7.0.9-linux-arm64.tar.gz"
     arm64.sha256 = "8dc8e5d1373189547aa716c578f9b29afcd7d8d94fd1208650d0809b3af9388b"
     armhf.url = "https://download.visualstudio.microsoft.com/download/pr/3463b963-3438-43db-84eb-e660956c99d6/b8486eb997e3991c5c04800ae8665cc2/aspnetcore-runtime-7.0.9-linux-arm.tar.gz"
