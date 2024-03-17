@@ -6,7 +6,7 @@ id = "technitium-dns"
 name = "Technitium DNS"
 description.en = "Block ads & malware at DNS level for your entire network! Self host a DNS server for privacy & security"
 
-version = "11.3.0~ynh2"
+version = "12.1~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -39,8 +39,8 @@ ram.runtime = "50M" # FIXME: replace with an **estimate** minimum ram requiremen
 
 [resources]
     [resources.sources.main]
-    url = "https://download.technitium.com/dns/archive/11.3/DnsServerPortable.tar.gz"
-    sha256 = "316290e7ea1c79a856498e7c780ad83a5cc63603f9fb5dee5a22fda42c1689af"
+    url = "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v12.1.tar.gz"
+    sha256 = "90286bf575c26cf3ad2e8e9f1d15dd736f234baa79837a2e3f06131043f24a0f"
     in_subdir = false
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
