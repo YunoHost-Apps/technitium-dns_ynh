@@ -23,8 +23,11 @@ fund = "https://patreon.com/technitium"
 yunohost = ">= 11.2"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = false
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
