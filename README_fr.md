@@ -36,7 +36,7 @@ Technitium DNS Server est un outil open source qui peut être utilisé pour bloq
 
 ## Captures d’écran
 
-![Capture d’écran de Technitium DNS](./doc/screenshots/example.jpg)
+![Capture d’écran de Technitium DNS](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 

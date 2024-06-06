@@ -37,7 +37,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ## 截图
 
-![Technitium DNS 的截图](./doc/screenshots/example.jpg)
+![Technitium DNS 的截图](./doc/screenshots/screenshot.png)
 
 ## 文档与资源
 

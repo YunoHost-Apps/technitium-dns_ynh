@@ -37,7 +37,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ## Screenshots
 
-![Screenshot of Technitium DNS](./doc/screenshots/example.jpg)
+![Screenshot of Technitium DNS](./doc/screenshots/screenshot.png)
 
 ## Documentation and resources
 
