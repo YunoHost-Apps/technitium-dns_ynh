@@ -13,5 +13,3 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - CNAME cloaking feature to block domain names that resolve to CNAME which are blocked.
 - Self host your domain names on your own DNS server.
 - Wildcard sub domain support.
-
-... and much more!

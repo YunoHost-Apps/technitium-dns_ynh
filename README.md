@@ -9,7 +9,7 @@ It shall NOT be edited by hand.
 
 [![Install Technitium DNS with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
-*[Read this README is other languages.](./ALL_README.md)*
+*[Read this README in other languages.](./ALL_README.md)*
 
 > *This package allows you to install Technitium DNS quickly and simply on a YunoHost server.*  
 > *If you don't have YunoHost, please consult [the guide](https://yunohost.org/install) to learn how to install it.*
@@ -32,13 +32,12 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - Self host your domain names on your own DNS server.
 - Wildcard sub domain support.
 
-... and much more!
 
-**Shipped version:** 11.3.0~ynh2
+**Shipped version:** 12.1.0~ynh1
 
 ## Screenshots
 
-![Screenshot of Technitium DNS](./doc/screenshots/example.jpg)
+![Screenshot of Technitium DNS](./doc/screenshots/screenshot.png)
 
 ## Documentation and resources
 

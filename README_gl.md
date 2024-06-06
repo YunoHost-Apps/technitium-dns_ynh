@@ -32,13 +32,12 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - Self host your domain names on your own DNS server.
 - Wildcard sub domain support.
 
-... and much more!
 
-**Versión proporcionada:** 11.3.0~ynh2
+**Versión proporcionada:** 12.1.0~ynh1
 
 ## Capturas de pantalla
 
-![Captura de pantalla de Technitium DNS](./doc/screenshots/example.jpg)
+![Captura de pantalla de Technitium DNS](./doc/screenshots/screenshot.png)
 
 ## Documentación e recursos
 
