@@ -4,7 +4,8 @@ packaging_format = 2
 
 id = "technitium-dns"
 name = "Technitium DNS"
-description.en = "Block ads & malware at DNS level for your entire network! Self host a DNS server for privacy & security"
+description.en = "DNS server for privacy and security"
+description.fr = "Serveur DNS pour la confidentialité et la sécurité"
 
 version = "12.1.0~ynh1"
 
