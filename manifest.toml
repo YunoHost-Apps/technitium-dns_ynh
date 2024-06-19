@@ -49,6 +49,7 @@ ram.runtime = "50M"
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
     autoupdate.asset = "tarball"
+    autoupdate.needs_manual_tweaks = true
 
     [resources.sources.dotnet]
     amd64.url = "https://download.visualstudio.microsoft.com/download/pr/ce31d92b-b514-4f9c-843b-29c466871369/b332eba5641cbc6eed1e3a98480972d2/aspnetcore-runtime-8.0.6-linux-x64.tar.gz"
