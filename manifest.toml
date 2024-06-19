@@ -43,8 +43,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v12.2.1.tar.gz"
-    sha256 = "5fff2e970cc62d71c6f7b25b7d7e44558d4272f91fc9eb4f1c67d5baee7ba272"
+    url = "https://download.technitium.com/dns/archive/12.2.1/DnsServerPortable.tar.gz"
+    sha256 = "8119931c77107331884d445a58a51f7debeea396ae8cb032ce63dffba0d7e8b1"
     in_subdir = false
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
