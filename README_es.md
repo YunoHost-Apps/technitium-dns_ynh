@@ -5,7 +5,7 @@ No se debe editar a mano.
 
 # Technitium DNS para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/technitium-dns.svg)](https://ci-apps.yunohost.org/ci/apps/technitium-dns/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
 
 [![Instalar Technitium DNS con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
@@ -33,7 +33,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - Wildcard sub domain support.
 
 
-**Versión actual:** 12.2.1~ynh1
+**Versión actual:** 13.0.1~ynh1
 
 ## Capturas
 
@@ -50,7 +50,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/technitium-dns_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/technitium-dns_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
