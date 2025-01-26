@@ -5,7 +5,9 @@ Il NE doit PAS être modifié à la main.
 
 # Technitium DNS pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
+[![Niveau d’intégration](https://apps.yunohost.org/badge/integration/technitium-dns)](https://ci-apps.yunohost.org/ci/apps/technitium-dns/)
+![Statut du fonctionnement](https://apps.yunohost.org/badge/state/technitium-dns)
+![Statut de maintenance](https://apps.yunohost.org/badge/maintained/technitium-dns)
 
 [![Installer Technitium DNS avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
@@ -32,7 +34,7 @@ Technitium DNS Server est un outil open source qui peut être utilisé pour bloq
 - Hébergez vous-même vos noms de domaine sur votre propre serveur DNS.
 - Prise en charge des sous-domaines génériques.
 
-**Version incluse :** 12.2.1~ynh1
+**Version incluse :** 13.4~ynh1
 
 ## Captures d’écran
 
