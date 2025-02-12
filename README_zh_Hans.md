@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Technitium DNS
 
-[![集成程度](https://dash.yunohost.org/integration/technitium-dns.svg)](https://dash.yunohost.org/appci/app/technitium-dns) ![工作状态](https://ci-apps.yunohost.org/ci/badges/technitium-dns.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/technitium-dns.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/technitium-dns)](https://ci-apps.yunohost.org/ci/apps/technitium-dns/)
+![工作状态](https://apps.yunohost.org/badge/state/technitium-dns)
+![维护状态](https://apps.yunohost.org/badge/maintained/technitium-dns)
 
 [![使用 YunoHost 安装 Technitium DNS](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=technitium-dns)
 
@@ -33,7 +35,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - Wildcard sub domain support.
 
 
-**分发版本：** 12.2.1~ynh1
+**分发版本：** 13.4.1~ynh1
 
 ## 截图
 
