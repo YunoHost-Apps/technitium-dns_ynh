@@ -7,7 +7,7 @@ name = "Technitium DNS"
 description.en = "DNS server for privacy and security"
 description.fr = "Serveur DNS pour la confidentialité et la sécurité"
 
-version = "13.4.1~ynh1"
+version = "13.4.2~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -43,8 +43,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://download.technitium.com/dns/archive/13.4.1/DnsServerPortable.tar.gz"
-    sha256 = "dfabe5e9d98b8963edb80e7689d9f87683145ea1ce3e256316b50b9ef9f5a45e"
+    url = "https://download.technitium.com/dns/archive/13.4.2/DnsServerPortable.tar.gz"
+    sha256 = "43cc69e13085a8955465103bf94353c0e5cb2c86ce87bf4efbea0c70e574ecce"
     in_subdir = false
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
