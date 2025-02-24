@@ -34,7 +34,7 @@ Technitium DNS Server est un outil open source qui peut être utilisé pour bloq
 - Hébergez vous-même vos noms de domaine sur votre propre serveur DNS.
 - Prise en charge des sous-domaines génériques.
 
-**Version incluse :** 13.4.2~ynh1
+**Version incluse :** 13.4.3~ynh1
 
 ## Captures d’écran
 

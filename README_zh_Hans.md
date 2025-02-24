@@ -35,7 +35,7 @@ Technitium DNS Server is an open source tool that can be used for blocking Inter
 - Wildcard sub domain support.
 
 
-**分发版本：** 13.4.2~ynh1
+**分发版本：** 13.4.3~ynh1
 
 ## 截图
 
