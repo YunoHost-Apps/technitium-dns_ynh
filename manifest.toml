@@ -21,7 +21,8 @@ cpe = "cpe:2.3:a:technitium:dnsserver"
 fund = "https://patreon.com/technitium"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 12.1.18"
+helpers_version = "2.1"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = false
 
@@ -62,8 +63,10 @@ ram.runtime = "50M"
     [resources.system_user]
 
     [resources.install_dir]
+    group = "www-data:r-x"
 
     [resources.data_dir]
+    group = "www-data:r-x"
 
     [resources.permissions]
     main.url = "/"
