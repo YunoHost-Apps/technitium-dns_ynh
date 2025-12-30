@@ -44,8 +44,8 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v14.3.0.tar.gz"
-    sha256 = "5f71c0661d22a5dd75374a9888bbd67469d1ba0b6b9947df770ec4833b7f36c3"
+    url = "https://download.technitium.com/dns/archive/14.3.0/DnsServerPortable.tar.gz"
+    sha256 = "9b2deaa54378e5abef1917907876ef2d0c89e0b6d09fc494e6a799b6316adea7"
     in_subdir = false
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
@@ -53,12 +53,12 @@ ram.runtime = "50M"
     autoupdate.needs_manual_tweaks = true
 
     [resources.sources.dotnet]
-    amd64.url = "https://download.visualstudio.microsoft.com/download/pr/ce31d92b-b514-4f9c-843b-29c466871369/b332eba5641cbc6eed1e3a98480972d2/aspnetcore-runtime-8.0.6-linux-x64.tar.gz"
-    amd64.sha256 = "d4f8ce14e12aba9ca970c15c1ce09486bffc930fe05d4520678763562ca6b48b"
-    arm64.url = "https://download.visualstudio.microsoft.com/download/pr/ccdcbb70-a5e9-4753-b6e3-4461ce56a69d/240803fc1ffba38ab3603778c03e9b87/aspnetcore-runtime-8.0.6-linux-arm64.tar.gz"
-    arm64.sha256 = "2d03221eb786ad84b865aa5eca84ad79bb2e8cde57e96cac9e0c4edaaec14c0f"
-    armhf.url = "https://download.visualstudio.microsoft.com/download/pr/c27a9707-8627-43d3-837e-fa144bab2984/40f243e656752b87ff033e568d49b510/aspnetcore-runtime-8.0.6-linux-arm.tar.gz"
-    armhf.sha256 = "b621a6cee65890a123bbf6282fc23190a8abe12af76279a1aa799b0e82f814bf"
+    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.22/aspnetcore-runtime-8.0.22-linux-x64.tar.gz"
+    amd64.sha256 = "8850a0b40a91d72f3d68b3a3a1f2faf9fb086573177e66aed8dedcf6fd295aec"
+    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.22/aspnetcore-runtime-8.0.22-linux-arm64.tar.gz"
+    arm64.sha256 = "110a531808e0b9814ea59cc9b205542dec1ea9d00f2586457c586bc5d28aa461"
+    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/8.0.22/aspnetcore-runtime-8.0.22-linux-arm.tar.gz"
+    armhf.sha256 = "c84f3e66b59f025c51155ea8bc59aca3134efa4eb534bf9a6bc09a2afc817c45"
 
     [resources.system_user]
 
