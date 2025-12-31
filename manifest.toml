@@ -21,7 +21,7 @@ cpe = "cpe:2.3:a:technitium:dnsserver"
 fund = "https://patreon.com/technitium"
 
 [integration]
-yunohost = ">= 12.1.18"
+yunohost = ">= 12.1.38"
 helpers_version = "2.1"
 architectures = ["amd64", "arm64", "armhf"]
 multi_instance = false
