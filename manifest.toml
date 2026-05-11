@@ -51,6 +51,12 @@ ram.runtime = "50M"
     autoupdate.strategy = "latest_github_tag"
     autoupdate.asset = "tarball"
     autoupdate.needs_manual_tweaks = true
+    prefetch = false
+
+    [resources.sources.prebuilt]
+    url = "https://download.technitium.com/dns/archive/15.2.0/DnsServerPortable.tar.gz"
+    sha256 = "2e39fb8d0718475790cc025e083a1bcfd837a5e79e4a1d0ed775881bd90287ef"
+    in_subdir = false
 
     [resources.sources.dotnet]
     amd64.url = "https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.7/dotnet-runtime-10.0.7-linux-x64.tar.gz"
