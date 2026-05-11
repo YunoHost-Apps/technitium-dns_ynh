@@ -11,7 +11,7 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Stopping $app's systemd service..."
 
-ynh_systemctl --service=$app --action="stop"
+ynh_systemctl --service=$app --action="stop" --wait_until="was stopped successfully"
 
 #=================================================
 # ENSURE DOWNWARD COMPATIBILITY
@@ -43,7 +43,7 @@ ynh_config_add_nginx
 
 # Create a dedicated systemd config
 ynh_config_add_systemd
-yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports=53
+yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/technitium/$app.log" --needs_exposed_ports=53
 
 # Use logrotate to manage app-specific logfile(s)
 ynh_config_add_logrotate /var/log/technitium/dns
@@ -53,7 +53,7 @@ ynh_config_add_logrotate /var/log/technitium/dns
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="$app" --action="start" --wait_until="in web browser to access web console."
 
 #=================================================
 # END OF SCRIPT

@@ -29,7 +29,7 @@ ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
-yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports=53
+yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/technitium/$app.log" --needs_exposed_ports=53
 
 ynh_restore "/etc/logrotate.d/$app"
 mkdir -p /var/log/technitium/dns
@@ -40,7 +40,7 @@ chown -R $app:$app /var/log/technitium
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start"
+ynh_systemctl --service="$app" --action="start" --wait_until="in web browser to access web console."
 
 #=================================================
 # RELOAD NGINX
