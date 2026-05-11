@@ -53,12 +53,13 @@ ram.runtime = "50M"
     autoupdate.needs_manual_tweaks = true
 
     [resources.sources.dotnet]
-    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-x64.tar.gz"
-    amd64.sha256 = "9c72253df8cbdbc775c76d6dcefc057aabb0bf7c978e5c3f24ab0afed839fd1f"
-    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-arm64.tar.gz"
-    arm64.sha256 = "d039cbb3ef822aad0226857c1d89763c9c2a4bf339015bb11c99a7f6e62d3062"
-    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-arm.tar.gz"
-    armhf.sha256 = "6ef6521e262d05302f3e52026d59b8464ae881fc983671c20e3a9e4034d7a99c"
+    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.7/dotnet-runtime-10.0.7-linux-x64.tar.gz"
+    amd64.sha256 = "825c0e34e405314c225713990601908435cb9b10cd2292fc1174eb0cde513f87"
+    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.7/dotnet-runtime-10.0.7-linux-arm64.tar.gz"
+    arm64.sha256 = "df43a2fdbb23b8692242e1838bcc2419faaeab613db950c7f1bf33f3b03cce1c"
+    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/Runtime/10.0.7/dotnet-runtime-10.0.7-linux-arm.tar.gz"
+    armhf.sha256 = "022197ba766f61ca403db1210b56d47986f6d51a205afb2db34f027a27cd99c0"
+    in_subdir = false
 
     [resources.system_user]
 
