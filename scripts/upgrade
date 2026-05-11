@@ -46,7 +46,7 @@ ynh_config_add_systemd
 yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports=53
 
 # Use logrotate to manage app-specific logfile(s)
-ynh_config_add_logrotate
+ynh_config_add_logrotate /var/log/technitium/dns
 
 #=================================================
 # START SYSTEMD SERVICE
