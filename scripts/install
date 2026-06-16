@@ -70,7 +70,8 @@ else
 fi
 
 mytoken1=$(curl -s "http://127.0.0.1:5380/api/user/createToken?user=admin&pass=admin&tokenName=mytoken1" | jq -r '.token')
-curl -s "http://localhost:5380/api/settings/set?dnsServerLocalEndPoints=$endpoints&Token=$mytoken1"
+curl -s "http://localhost:5380/api/settings/set?dnsServerLocalEndPoints=$endpoints&token=$mytoken1"
+curl -s "http://localhost:5380/api/settings/set?dnsServerDomain=$domain&token=$mytoken1"
 
 #=================================================
 # RESTART SYSTEMD SERVICE
