@@ -29,14 +29,21 @@ ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
 ynh_restore "/var/log/$app"
 
+ynh_hide_warnings yunohost firewall allow Both 53
+
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
 yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports=53
+
+ynh_config_add --template="dnsmasq.conf" --destination="/etc/dnsmasq.d/$app.conf"
+
+ynh_systemctl --service="dnsmasq" --action="restart"
 
 #=================================================
 # ADD A CRON JOB
 #=================================================
 ynh_config_add --template="logsymlink.cron" --destination="/etc/cron.d/$app"
+chown root: "/etc/cron.d/$app"
 chmod 644 "/etc/cron.d/$app"
 
 #=================================================
