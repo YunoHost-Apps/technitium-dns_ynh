@@ -26,7 +26,13 @@ ynh_config_add_systemd
 mkdir -p "/var/log/$app/dns"
 chown -R "$app:$app" "/var/log/$app"
 
+ynh_hide_warnings yunohost firewall allow Both 53
+
 yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports="53"
+
+ynh_config_add --template="dnsmasq.conf" --destination="/etc/dnsmasq.d/$app.conf"
+
+ynh_systemctl --service="dnsmasq" --action="restart"
 
 #=================================================
 # ADD A CRON JOB
@@ -37,14 +43,41 @@ chmod 644 "/etc/cron.d/$app"
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
-ynh_script_progression "Starting $app's systemd service..."
-
-ynh_systemctl --service="$app" --action="restart" --log_path=systemd --wait_until="was started successfully"
+ynh_systemctl --service="$app" --action="start" --log_path=systemd --wait_until="was started successfully"
 
 #=================================================
 # LINK LOGS
 #=================================================
 ln -sf $(ls -t /var/log/$app/dns/*.log | head -n 1) /var/log/$app/$app.log
+
+#=================================================
+# SET LOCAL ENDPOINT IP(S)
+#=================================================
+gateway_v4=$(ip -4 route show default | awk '{print $3}' | head -n1)
+ipv4=$(ip -4 route get "$gateway_v4" 2>/dev/null | grep -oP 'src \K\S+')
+
+gateway_v6=$(ip -6 route show default | awk '{print $3}' | head -n1)
+if [ -n "$gateway_v6" ]; then
+    ipv6=$(ip -6 route get "$gateway_v6" 2>/dev/null | grep -oP 'src \K\S+' | grep -v '^fe80')
+else
+    ipv6=""
+fi
+
+if [ -n "$ipv6" ]; then
+    endpoints="$ipv4:53,[$ipv6]:53"
+else
+    endpoints="$ipv4:53"
+fi
+
+mytoken1=$(curl -s "http://127.0.0.1:5380/api/user/createToken?user=admin&pass=admin&tokenName=mytoken1" | jq -r '.token')
+curl -s "http://localhost:5380/api/settings/set?dnsServerLocalEndPoints=$endpoints&Token=$mytoken1"
+
+#=================================================
+# RESTART SYSTEMD SERVICE
+#=================================================
+ynh_script_progression "Starting $app's systemd service..."
+
+ynh_systemctl --service="$app" --action="restart" --log_path=systemd --wait_until="was started successfully"
 
 #=================================================
 # END OF SCRIPT

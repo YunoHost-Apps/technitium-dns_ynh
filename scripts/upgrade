@@ -30,6 +30,9 @@ if ynh_app_upgrading_from_version_before_or_equal_to 14.3.0~ynh1; then
     chown -R "$app:$app" "/var/log/$app"
     ln -sf "/var/log/$app/dns" "$data_dir/logs"
     ln -sf $(ls -t /var/log/$app/dns/*.log | head -n 1) /var/log/$app/$app.log
+    ynh_config_add --template="dnsmasq.conf" --destination="/etc/dnsmasq.d/$app.conf"
+    ynh_systemctl --service="dnsmasq" --action="restart"
+    ynh_hide_warnings yunohost firewall allow Both 53
 fi
 
 #=================================================
