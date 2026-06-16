@@ -1,0 +1,1 @@
+0,15,30,45 0 * * * ln -sf $(ls -t /var/log/__APP__/dns/*.log | head -n 1) /var/log/__APP__/__APP__.log

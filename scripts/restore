@@ -27,20 +27,24 @@ ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
+ynh_restore "/var/log/$app"
+
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
-yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/technitium/$app.log" --needs_exposed_ports=53
+yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports=53
 
-ynh_restore "/etc/logrotate.d/$app"
-mkdir -p /var/log/technitium/dns
-chown -R $app:$app /var/log/technitium
+#=================================================
+# ADD A CRON JOB
+#=================================================
+ynh_config_add --template="logsymlink.cron" --destination="/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-ynh_systemctl --service="$app" --action="start" --wait_until="in web browser to access web console."
+ynh_systemctl --service="$app" --action="start" --log_path=systemd --wait_until="was started successfully"
 
 #=================================================
 # RELOAD NGINX

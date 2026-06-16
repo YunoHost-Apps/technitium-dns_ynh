@@ -11,7 +11,6 @@ source /usr/share/yunohost/helpers
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --source_id="prebuilt"  --dest_dir="$install_dir/sources"
 ynh_setup_source --source_id="dotnet" --dest_dir="$install_dir/dotnet"
 
@@ -20,23 +19,32 @@ ynh_setup_source --source_id="dotnet" --dest_dir="$install_dir/dotnet"
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
 
-# Create a dedicated NGINX config
 ynh_config_add_nginx
 
-# Create a dedicated systemd config
 ynh_config_add_systemd
-yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/technitium/$app.log" --needs_exposed_ports="53"
 
-# Use logrotate to manage application logfile(s)
-ynh_config_add_logrotate /var/log/technitium/dns
+mkdir -p "/var/log/$app/dns"
+chown -R "$app:$app" "/var/log/$app"
+
+yunohost service add "$app" --description="Technitium DNS Server" --log="/var/log/$app/$app.log" --needs_exposed_ports="53"
+
+#=================================================
+# ADD A CRON JOB
+#=================================================
+ynh_config_add --template="logsymlink.cron" --destination="/etc/cron.d/$app"
+chmod 644 "/etc/cron.d/$app"
 
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
 ynh_script_progression "Starting $app's systemd service..."
 
-# Start a systemd service
-ynh_systemctl --service="$app" --action="start" --wait_until="^.*in web browser to access web console\\.$"
+ynh_systemctl --service="$app" --action="restart" --log_path=systemd --wait_until="was started successfully"
+
+#=================================================
+# LINK LOGS
+#=================================================
+ln -sf $(ls -t /var/log/$app/dns/*.log | head -n 1) /var/log/$app/$app.log
 
 #=================================================
 # END OF SCRIPT
