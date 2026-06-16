@@ -7,7 +7,7 @@ name = "Technitium DNS"
 description.en = "DNS server for privacy and security"
 description.fr = "Serveur DNS pour la confidentialité et la sécurité"
 
-version = "14.3.0~ynh1"
+version = "15.2.0~ynh1"
 
 maintainers = ["Navan Chauhan"]
 
@@ -44,21 +44,28 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    url = "https://download.technitium.com/dns/archive/14.3.0/DnsServerPortable.tar.gz"
-    sha256 = "9b2deaa54378e5abef1917907876ef2d0c89e0b6d09fc494e6a799b6316adea7"
+    url = "https://github.com/TechnitiumSoftware/DnsServer/archive/refs/tags/v15.2.0.tar.gz"
+    sha256 = "9247b3c70a8f58d336741819b4550b29937815dc535d1cc0f36ffd7cedb8860c"
     in_subdir = false
     # Careful, this autoupdate does not put the right asset, it only serves as a notification!
     autoupdate.strategy = "latest_github_tag"
     autoupdate.asset = "tarball"
     autoupdate.needs_manual_tweaks = true
+    prefetch = false
+
+    [resources.sources.prebuilt]
+    url = "https://download.technitium.com/dns/archive/15.2.0/DnsServerPortable.tar.gz"
+    sha256 = "2e39fb8d0718475790cc025e083a1bcfd837a5e79e4a1d0ed775881bd90287ef"
+    in_subdir = false
 
     [resources.sources.dotnet]
-    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-x64.tar.gz"
-    amd64.sha256 = "9c72253df8cbdbc775c76d6dcefc057aabb0bf7c978e5c3f24ab0afed839fd1f"
-    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-arm64.tar.gz"
-    arm64.sha256 = "d039cbb3ef822aad0226857c1d89763c9c2a4bf339015bb11c99a7f6e62d3062"
-    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/9.0.11/aspnetcore-runtime-9.0.11-linux-arm.tar.gz"
-    armhf.sha256 = "6ef6521e262d05302f3e52026d59b8464ae881fc983671c20e3a9e4034d7a99c"
+    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-x64.tar.gz"
+    amd64.sha256 = "e7371614247bbc481196434d3cc2095e187b569c1929ab5c1af056682f1ca512"
+    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-arm64.tar.gz"
+    arm64.sha256 = "5c95e878081d8b0476f36ff141a965573cecbc37f2e0555d2374b49d67572b00"
+    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-arm.tar.gz"
+    armhf.sha256 = "79c4f9fbc5d028c939acb8bdc3899d1e788e2bad032d9a09f22eb21c9a9b8d16"
+    in_subdir = false
 
     [resources.system_user]
 

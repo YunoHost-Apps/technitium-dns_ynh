@@ -11,30 +11,24 @@ ynh_print_info "Declaring files to be backed up..."
 #=================================================
 # BACKUP THE APP MAIN DIR
 #=================================================
-
 ynh_backup "$install_dir"
 
 #=================================================
 # BACKUP THE DATA DIR
 #=================================================
-
 ynh_backup "$data_dir"
 
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
-
 ynh_backup "/etc/nginx/conf.d/$domain.d/$app.conf"
-
-ynh_backup "/etc/logrotate.d/$app"
 
 ynh_backup "/etc/systemd/system/$app.service"
 
 #=================================================
 # BACKUP VARIOUS FILES
 #=================================================
-
-ynh_backup "/var/log/$app/"
+ynh_backup "/var/log/$app"
 
 #=================================================
 # END OF SCRIPT
