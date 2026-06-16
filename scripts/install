@@ -58,7 +58,7 @@ ipv4=$(ip -4 route get "$gateway_v4" 2>/dev/null | grep -oP 'src \K\S+')
 
 gateway_v6=$(ip -6 route show default | awk '{print $3}' | head -n1)
 if [ -n "$gateway_v6" ]; then
-    ipv6=$(ip -6 route get "$gateway_v6" 2>/dev/null | grep -oP 'src \K\S+' | grep -v '^fe80')
+    ipv6=$(ip -6 route get "$gateway_v6" 2>/dev/null | grep -oP 'src \K\S+' | grep -v '^fe80' || true)
 else
     ipv6=""
 fi
