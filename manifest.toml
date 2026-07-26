@@ -54,17 +54,17 @@ ram.runtime = "50M"
     prefetch = false
 
     [resources.sources.prebuilt]
-    url = "https://download.technitium.com/dns/archive/15.3.0/DnsServerPortable.tar.gz"
-    sha256 = "8e372b70f63daba41bf7cfb35652c32c15e8e6d4db5f3127411d5772ae088eb5"
+    url = "https://download.technitium.com/dns/archive/15.4.0/DnsServerPortable.tar.gz"
+    sha256 = "461ac09d4304ace85093fc17b10a7ee13a8796eae0adb4393866bd4d66ab283f"
     in_subdir = false
 
     [resources.sources.dotnet]
-    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-x64.tar.gz"
-    amd64.sha256 = "e7371614247bbc481196434d3cc2095e187b569c1929ab5c1af056682f1ca512"
-    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-arm64.tar.gz"
-    arm64.sha256 = "5c95e878081d8b0476f36ff141a965573cecbc37f2e0555d2374b49d67572b00"
-    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.7/aspnetcore-runtime-10.0.7-linux-arm.tar.gz"
-    armhf.sha256 = "79c4f9fbc5d028c939acb8bdc3899d1e788e2bad032d9a09f22eb21c9a9b8d16"
+    amd64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.9/aspnetcore-runtime-10.0.9-linux-x64.tar.gz"
+    amd64.sha256 = "3d376c2ae568e089b02f71f22972bdd935a80e51cf1e11d7846cb41ffea27dea"
+    arm64.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.9/aspnetcore-runtime-10.0.9-linux-arm64.tar.gz"
+    arm64.sha256 = "404b5ae1cbf86c6657b7ea32a8b268b70867c3e40c69b070c1be1d0887168e19"
+    armhf.url = "https://builds.dotnet.microsoft.com/dotnet/aspnetcore/Runtime/10.0.9/aspnetcore-runtime-10.0.9-linux-arm.tar.gz"
+    armhf.sha256 = "e612719bdcc5f3b56ccb2daaae305abd5114a252cf8825896adff5020c68c628"
     in_subdir = false
 
     [resources.system_user]
