@@ -54,8 +54,8 @@ ram.runtime = "50M"
     prefetch = false
 
     [resources.sources.prebuilt]
-    url = "https://download.technitium.com/dns/archive/15.6.0/DnsServerPortable.tar.gz"
-    sha256 = "928f1fe28241395a6f527aa2f1921293b78fcb5b69e7e7c74f889aadd85055f3"
+    url = "https://download.technitium.com/dns/archive/15.6.1/DnsServerPortable.tar.gz"
+    sha256 = "d56e2822a3645baa4850a987a033b207ffc3759761d2ee6cccdd70b8047252ff"
     in_subdir = false
 
     [resources.sources.dotnet]
